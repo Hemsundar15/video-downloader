@@ -2,12 +2,14 @@
   "name": "video-downloader",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "bin": {
-    "getv": "index.js"
+    "get": "dist/index.js"
   },
   "scripts": {
+    "start": "nodemon --exec ts-node src/index.ts",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "build": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,5 +18,11 @@
   "dependencies": {
     "axios": "^1.2.2",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.4"
   }
 }
